@@ -1,1 +1,16 @@
-
+#!/bin/bash
+echo &quot;Enter marks of 5 subjects:&quot;
+read m1 m2 m3 m4 m5
+total=$((m1+m2+m3+m4+m5))
+avg=$((total/5))
+echo &quot;Total = $total&quot;
+echo &quot;Average = $avg&quot;
+if [ $avg -ge 90 ]; then
+echo &quot;Grade: A&quot;
+elif [ $avg -ge 75 ]; then
+echo &quot;Grade: B&quot;
+elif [ $avg -ge 50 ]; then
+echo &quot;Grade: C&quot;
+else
+echo &quot;Grade: Fail&quot;
+fi
